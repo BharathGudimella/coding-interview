@@ -58,4 +58,19 @@ public class Deck
         }
     }
 
+    public void Shuffle()
+    {
+        var cards = new List<Card>();
+        while(_stackOfCards.Count > 0)
+        {
+            var card = _stackOfCards.Pop();
+            int randomNumber = Random.Shared.Next(cards.Count + 1);
+            cards.Insert(randomNumber, card);
+        }
+        foreach (var card in cards)
+        {
+            _stackOfCards.Push(card);   
+        }
+    }
+
 }

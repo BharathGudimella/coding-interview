@@ -14,6 +14,9 @@ public static class Program
 
         // TODO: shuffle the deck
         Console.WriteLine("Shuffling...");
+        deck.Shuffle();
+
+        Console.WriteLine("Cards Count:" + deck.RemainingCards);
 
         // Deal all the cards
         while (!deck.Empty)
